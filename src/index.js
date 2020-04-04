@@ -26,12 +26,19 @@ program
   .description('Interactive pizza ordering')
   .action(require('./commands/create'));
 
+
+program
+  .command('latest')
+  .alias('last')
+  .description('Get the latest changes')
+  .option('-f --format <json>', 'Output format (plain|json|props)', 'plain')
+  .option('-o --output <filename>', 'Write to a file instead', null)
+  .action(require('./commands/latest'));
+
 program
   .command('parse')
   .description('Show the current working directory')
-  .action(() => {
-    console.log(process.cwd());
-  });
+  .action(require('./commands/parse'));
 
 program
     .command('serve', { isDefault: false })

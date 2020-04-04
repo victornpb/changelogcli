@@ -9,13 +9,13 @@ const WORKSPACE = process.env.WORKSPACE || '.';
 const CHANGELOG_FILE = process.env.CHANGELOG_FILE || 'CHANGELOG.md';
 const OUTPUT_FILE = process.env.OUTPUT_FILE || '.output';
 
-module.exports = async function parseCmd(options) {
+module.exports = async function (options) {
     
     const cwd = process.cwd();
 
     const str = fs.readFileSync(path.join(cwd, CHANGELOG_FILE), 'utf8');
     const parsedArray = changelogParse(str);
-    console.log(parsedArray);
+    console.log(JSON.stringify(parsedArray, null, 4));
 
     // writePropsFile({
     //     LAST_CHANGELOG_VERSION: lastChangelog.version,
