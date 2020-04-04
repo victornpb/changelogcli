@@ -22,10 +22,15 @@ program
   .action(async () => { await init(); });
 
 program
-  .command('cwd')
+  .command('create')
+  .description('Interactive pizza ordering')
+  .action(require('./commands/create'));
+
+program
+  .command('parse')
   .description('Show the current working directory')
   .action(() => {
-    console.log(.cwd());
+    console.log(process.cwd());
   });
 
 program
