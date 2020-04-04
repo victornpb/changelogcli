@@ -4,7 +4,7 @@
   "description": "A cli for managing your changelog.md",
   "main": "src/index.js",
   "scripts": {
-    "start": "./src/index.js",
+    "start": "./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -14,8 +14,7 @@
   "bin": {
     "changelogcli": "./src/index.js"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "victornpb",
   "license": "UNLICENSED",
   "bugs": {
@@ -26,6 +25,5 @@
     "commander": "^5.0.0",
     "inquirer": "^0.9.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
